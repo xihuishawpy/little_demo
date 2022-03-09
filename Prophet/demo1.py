@@ -50,7 +50,6 @@ fig = m.plot_components(forecast)
 
 
 # 2、另外引入【法定节假日】，加入模型（通过add_country_holidays方法）
-
 m = Prophet(holidays=holidays)
 m.add_country_holidays(country_name='US') # CN ：中国法定节假日
 m.fit(df)
