@@ -28,5 +28,3 @@ m = Prophet().fit(df)
 fig = m.plot(m.predict(future))
 
 
-
-
