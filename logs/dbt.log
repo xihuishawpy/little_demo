@@ -1,0 +1,733 @@
+2022-04-13 05:11:49.906208 (MainThread): Running with dbt=0.19.2
+2022-04-13 05:11:49.964215 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\Ceallach_Shaw\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2022-04-13 05:11:49.964215 (MainThread): Tracking: tracking
+2022-04-13 05:11:49.994552 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F22EE26C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F22EEB3FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F22EEB3340>]}
+2022-04-13 05:11:50.003559 (MainThread): Partial parsing not enabled
+2022-04-13 05:11:50.005560 (MainThread): Parsing macros\adapters.sql
+2022-04-13 05:11:50.048570 (MainThread): Parsing macros\catalog.sql
+2022-04-13 05:11:50.051557 (MainThread): Parsing macros\schema_tests.sql
+2022-04-13 05:11:50.056571 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2022-04-13 05:11:50.062573 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2022-04-13 05:11:50.069574 (MainThread): Parsing macros\materializations\seed\seed.sql
+2022-04-13 05:11:50.074575 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2022-04-13 05:11:50.109569 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2022-04-13 05:11:50.111571 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2022-04-13 05:11:50.121573 (MainThread): Parsing macros\core.sql
+2022-04-13 05:11:50.125574 (MainThread): Parsing macros\adapters\common.sql
+2022-04-13 05:11:50.168584 (MainThread): Parsing macros\etc\datetime.sql
+2022-04-13 05:11:50.178586 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2022-04-13 05:11:50.179587 (MainThread): Parsing macros\etc\get_custom_database.sql
+2022-04-13 05:11:50.181587 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2022-04-13 05:11:50.184588 (MainThread): Parsing macros\etc\is_incremental.sql
+2022-04-13 05:11:50.186589 (MainThread): Parsing macros\etc\query.sql
+2022-04-13 05:11:50.188588 (MainThread): Parsing macros\materializations\helpers.sql
+2022-04-13 05:11:50.197591 (MainThread): Parsing macros\materializations\common\merge.sql
+2022-04-13 05:11:50.211594 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2022-04-13 05:11:50.213594 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2022-04-13 05:11:50.220595 (MainThread): Parsing macros\materializations\seed\seed.sql
+2022-04-13 05:11:50.243601 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2022-04-13 05:11:50.274608 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2022-04-13 05:11:50.276608 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2022-04-13 05:11:50.297613 (MainThread): Parsing macros\materializations\table\table.sql
+2022-04-13 05:11:50.304616 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2022-04-13 05:11:50.310623 (MainThread): Parsing macros\materializations\view\view.sql
+2022-04-13 05:11:50.317630 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2022-04-13 05:11:50.320619 (MainThread): Parsing macros\schema_tests\not_null.sql
+2022-04-13 05:11:50.323621 (MainThread): Parsing macros\schema_tests\relationships.sql
+2022-04-13 05:11:50.325620 (MainThread): Parsing macros\schema_tests\unique.sql
+2022-04-13 05:11:50.332621 (MainThread): Partial parsing not enabled
+2022-04-13 05:11:50.602288 (MainThread): Acquiring new oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:50.634930 (MainThread): Acquiring new oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:50.640933 (MainThread): Acquiring new oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:50.644939 (MainThread): Acquiring new oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:50.648939 (MainThread): Acquiring new oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:50.919527 (MainThread): WARNING: Found documentation for resource "orders" which was not found or is disabled
+2022-04-13 05:11:50.919527 (MainThread): [WARNING]: Test 'test.dbt_demo.unique_orders_order_id' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.921519 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_order_id' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.922516 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_customer_id' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.923517 (MainThread): [WARNING]: Test 'test.dbt_demo.relationships_orders_customer_id__customer_id__ref_customers_' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.924518 (MainThread): [WARNING]: Test 'test.dbt_demo.accepted_values_orders_status__placed__shipped__completed__return_pending__returned' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.926517 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_amount' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.927517 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_credit_card_amount' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.928516 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_coupon_amount' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.928516 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_bank_transfer_amount' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.929517 (MainThread): [WARNING]: Test 'test.dbt_demo.not_null_orders_gift_card_amount' (models\schema.yml) depends on a node named 'orders' which was not found
+2022-04-13 05:11:50.939518 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2300C0FA0>]}
+2022-04-13 05:11:50.946527 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2022-04-13 05:11:50.947522 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2300C0FA0>]}
+2022-04-13 05:11:50.947522 (MainThread): Found 5 models, 10 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 3 seed files, 0 sources, 0 exposures
+2022-04-13 05:11:50.949521 (MainThread): 
+2022-04-13 05:11:50.949521 (MainThread): Acquiring new oracle connection "master".
+2022-04-13 05:11:50.951521 (ThreadPoolExecutor-0_0): Acquiring new oracle connection "list_limsbi".
+2022-04-13 05:11:50.960523 (ThreadPoolExecutor-0_0): Using oracle connection "list_limsbi".
+2022-04-13 05:11:50.960523 (ThreadPoolExecutor-0_0): On list_limsbi: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "connection_name": "list_limsbi"} */
+select lower(username) as "name"
+      from sys.all_users
+      order by username
+  
+2022-04-13 05:11:50.960523 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2022-04-13 05:11:50.961523 (ThreadPoolExecutor-0_0): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:51.088921 (ThreadPoolExecutor-0_0): SQL status: OK in 0.13 seconds
+2022-04-13 05:11:51.227520 (ThreadPoolExecutor-0_0): On list_limsbi: Close
+2022-04-13 05:11:51.288653 (ThreadPoolExecutor-1_0): Acquiring new oracle connection "list_limsbi_lcj".
+2022-04-13 05:11:51.294656 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2022-04-13 05:11:51.294656 (ThreadPoolExecutor-1_0): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:51.568727 (ThreadPoolExecutor-1_0): Using oracle connection "list_limsbi_lcj".
+2022-04-13 05:11:51.568727 (ThreadPoolExecutor-1_0): On list_limsbi_lcj: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "connection_name": "list_limsbi_lcj"} */
+with tables as
+      (select UPPER(SYS_CONTEXT('userenv', 'DB_NAME')) table_catalog,
+         UPPER(owner) table_schema,
+         table_name,
+         case
+           when iot_type = 'Y'
+           then 'IOT'
+           when temporary = 'Y'
+           then 'TEMP'
+           else 'BASE TABLE'
+         end table_type
+       from sys.all_tables
+       union all
+       select UPPER(SYS_CONTEXT('userenv', 'DB_NAME')),
+         UPPER(owner),
+         view_name,
+         'VIEW'
+       from sys.all_views
+  )
+  select lower(table_catalog) as "database_name"
+    ,lower(table_name) as "name"
+    ,lower(table_schema) as "schema_name"
+    ,case table_type
+      when 'BASE TABLE' then 'table'
+      when 'VIEW' then 'view'
+    end as "kind"
+  from tables
+  where table_type in ('BASE TABLE', 'VIEW')
+    and table_catalog = upper('limsbi')
+    and table_schema = upper('lcj')
+  
+2022-04-13 05:11:51.622743 (ThreadPoolExecutor-1_0): SQL status: OK in 0.05 seconds
+2022-04-13 05:11:51.644749 (ThreadPoolExecutor-1_0): On list_limsbi_lcj: ROLLBACK
+2022-04-13 05:11:51.646748 (ThreadPoolExecutor-1_0): On list_limsbi_lcj: Close
+2022-04-13 05:11:51.778590 (MainThread): Opening a new connection, currently in state init
+2022-04-13 05:11:51.779583 (MainThread): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:51.833782 (MainThread): On master: COMMIT
+2022-04-13 05:11:51.833782 (MainThread): Using oracle connection "master".
+2022-04-13 05:11:51.833782 (MainThread): On master: COMMIT
+2022-04-13 05:11:51.837779 (MainThread): SQL status: OK in 0.00 seconds
+2022-04-13 05:11:51.837779 (MainThread): On master: Close
+2022-04-13 05:11:51.844753 (MainThread): 13:11:51 | Concurrency: 4 threads (target='dev')
+2022-04-13 05:11:51.845755 (MainThread): 13:11:51 | 
+2022-04-13 05:11:51.891765 (Thread-1): Began running node model.dbt_demo.stg_orders
+2022-04-13 05:11:51.891765 (Thread-2): Began running node model.dbt_demo.stg_payments
+2022-04-13 05:11:51.891765 (Thread-3): Began running node model.dbt_demo.stg_customers
+2022-04-13 05:11:51.892766 (Thread-1): 13:11:51 | 1 of 5 START view model lcj.stg_orders............................... [RUN]
+2022-04-13 05:11:51.892766 (Thread-2): 13:11:51 | 2 of 5 START view model lcj.stg_payments............................. [RUN]
+2022-04-13 05:11:51.892766 (Thread-3): 13:11:51 | 3 of 5 START view model lcj.stg_customers............................ [RUN]
+2022-04-13 05:11:51.893766 (Thread-1): Acquiring new oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:51.893766 (Thread-1): Compiling model.dbt_demo.stg_orders
+2022-04-13 05:11:51.896320 (Thread-1): Writing injected SQL for node "model.dbt_demo.stg_orders"
+2022-04-13 05:11:51.896320 (Thread-2): Acquiring new oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:51.897324 (Thread-3): Acquiring new oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:51.897324 (Thread-2): Compiling model.dbt_demo.stg_payments
+2022-04-13 05:11:51.897324 (Thread-3): Compiling model.dbt_demo.stg_customers
+2022-04-13 05:11:51.900324 (Thread-2): Writing injected SQL for node "model.dbt_demo.stg_payments"
+2022-04-13 05:11:51.903324 (Thread-3): Writing injected SQL for node "model.dbt_demo.stg_customers"
+2022-04-13 05:11:51.904329 (Thread-1): finished collecting timing info
+2022-04-13 05:11:51.926906 (Thread-3): finished collecting timing info
+2022-04-13 05:11:51.938909 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:51.944917 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:51.944917 (Thread-1): On model.dbt_demo.stg_orders: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_orders"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_orders__dbt_tmp cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:51.944917 (Thread-2): finished collecting timing info
+2022-04-13 05:11:51.944917 (Thread-3): On model.dbt_demo.stg_customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_customers"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_customers__dbt_tmp cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:51.945910 (Thread-1): Opening a new connection, currently in state init
+2022-04-13 05:11:51.954913 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:51.954913 (Thread-3): Opening a new connection, currently in state init
+2022-04-13 05:11:51.954913 (Thread-1): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:51.954913 (Thread-2): On model.dbt_demo.stg_payments: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_payments"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_payments__dbt_tmp cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:51.954913 (Thread-3): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:51.955913 (Thread-2): Opening a new connection, currently in state init
+2022-04-13 05:11:51.955913 (Thread-2): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:52.138263 (Thread-1): SQL status: OK in 0.19 seconds
+2022-04-13 05:11:52.141225 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:52.141225 (Thread-1): On model.dbt_demo.stg_orders: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_orders"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_orders__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:52.546362 (Thread-1): SQL status: OK in 0.41 seconds
+2022-04-13 05:11:52.552362 (Thread-1): Writing runtime SQL for node "model.dbt_demo.stg_orders"
+2022-04-13 05:11:52.553357 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:52.553357 (Thread-1): On model.dbt_demo.stg_orders: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_orders"} */
+
+  create view lcj.stg_orders__dbt_tmp as
+    with source as (
+
+    select * from lcj.raw_orders
+
+),
+
+renamed as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+
+    from source
+
+)
+
+select * from renamed
+
+
+2022-04-13 05:11:52.570359 (Thread-2): SQL status: OK in 0.61 seconds
+2022-04-13 05:11:52.572360 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:52.573360 (Thread-2): On model.dbt_demo.stg_payments: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_payments"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_payments__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:52.573957 (Thread-3): SQL status: OK in 0.62 seconds
+2022-04-13 05:11:52.574967 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:52.575967 (Thread-1): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.575967 (Thread-3): On model.dbt_demo.stg_customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_customers"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_customers__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:52.584975 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:52.584975 (Thread-1): On model.dbt_demo.stg_orders: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_orders"} */
+rename stg_orders to stg_orders__dbt_backup
+2022-04-13 05:11:52.593625 (Thread-3): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:52.594626 (Thread-3): Writing runtime SQL for node "model.dbt_demo.stg_customers"
+2022-04-13 05:11:52.595626 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:52.595626 (Thread-3): On model.dbt_demo.stg_customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_customers"} */
+
+  create view lcj.stg_customers__dbt_tmp as
+    with source as (
+    select * from lcj.raw_customers
+
+),
+
+renamed as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from source
+
+)
+
+select * from renamed
+
+
+2022-04-13 05:11:52.600904 (Thread-2): SQL status: OK in 0.03 seconds
+2022-04-13 05:11:52.602908 (Thread-2): Writing runtime SQL for node "model.dbt_demo.stg_payments"
+2022-04-13 05:11:52.602908 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:52.603910 (Thread-2): On model.dbt_demo.stg_payments: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_payments"} */
+
+  create view lcj.stg_payments__dbt_tmp as
+    with source as (
+
+    select * from lcj.raw_payments
+
+),
+
+renamed as (
+
+    select
+        id as payment_id,
+        order_id,
+        payment_method,
+
+        -- `amount` is currently stored in cents, so we convert it to dollars
+        amount / 100 as amount
+
+    from source
+
+)
+
+select * from renamed
+
+
+2022-04-13 05:11:52.610910 (Thread-3): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.612911 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:52.612911 (Thread-3): On model.dbt_demo.stg_customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_customers"} */
+rename stg_customers to stg_customers__dbt_backup
+2022-04-13 05:11:52.615919 (Thread-2): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:52.618925 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:52.619926 (Thread-2): On model.dbt_demo.stg_payments: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_payments"} */
+rename stg_payments to stg_payments__dbt_backup
+2022-04-13 05:11:52.637918 (Thread-3): SQL status: OK in 0.03 seconds
+2022-04-13 05:11:52.639918 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:52.639918 (Thread-2): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.640925 (Thread-3): On model.dbt_demo.stg_customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_customers"} */
+rename stg_customers__dbt_tmp to stg_customers
+2022-04-13 05:11:52.642931 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:52.643921 (Thread-2): On model.dbt_demo.stg_payments: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_payments"} */
+rename stg_payments__dbt_tmp to stg_payments
+2022-04-13 05:11:52.659498 (Thread-3): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.666502 (Thread-2): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.669502 (Thread-3): On model.dbt_demo.stg_customers: COMMIT
+2022-04-13 05:11:52.671510 (Thread-2): On model.dbt_demo.stg_payments: COMMIT
+2022-04-13 05:11:52.671510 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:52.671510 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:52.671510 (Thread-3): On model.dbt_demo.stg_customers: COMMIT
+2022-04-13 05:11:52.672504 (Thread-2): On model.dbt_demo.stg_payments: COMMIT
+2022-04-13 05:11:52.683513 (Thread-1): SQL status: OK in 0.10 seconds
+2022-04-13 05:11:52.685506 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:52.685506 (Thread-1): On model.dbt_demo.stg_orders: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_orders"} */
+rename stg_orders__dbt_tmp to stg_orders
+2022-04-13 05:11:52.691521 (Thread-2): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.694522 (Thread-2): Using oracle connection "model.dbt_demo.stg_payments".
+2022-04-13 05:11:52.694522 (Thread-3): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.694522 (Thread-2): On model.dbt_demo.stg_payments: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_payments"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_payments__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:52.696511 (Thread-3): Using oracle connection "model.dbt_demo.stg_customers".
+2022-04-13 05:11:52.696511 (Thread-3): On model.dbt_demo.stg_customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_customers"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_customers__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:52.706480 (Thread-1): SQL status: OK in 0.02 seconds
+2022-04-13 05:11:52.708475 (Thread-1): On model.dbt_demo.stg_orders: COMMIT
+2022-04-13 05:11:52.708475 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:52.708475 (Thread-1): On model.dbt_demo.stg_orders: COMMIT
+2022-04-13 05:11:52.807456 (Thread-1): SQL status: OK in 0.10 seconds
+2022-04-13 05:11:52.810449 (Thread-1): Using oracle connection "model.dbt_demo.stg_orders".
+2022-04-13 05:11:52.810449 (Thread-1): On model.dbt_demo.stg_orders: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.stg_orders"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP view lcj.stg_orders__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:52.914251 (Thread-3): SQL status: OK in 0.22 seconds
+2022-04-13 05:11:52.916248 (Thread-3): finished collecting timing info
+2022-04-13 05:11:52.916248 (Thread-3): On model.dbt_demo.stg_customers: Close
+2022-04-13 05:11:52.932250 (Thread-1): SQL status: OK in 0.12 seconds
+2022-04-13 05:11:52.933252 (Thread-1): finished collecting timing info
+2022-04-13 05:11:52.934253 (Thread-1): On model.dbt_demo.stg_orders: Close
+2022-04-13 05:11:52.948261 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2300CA610>]}
+2022-04-13 05:11:52.948261 (Thread-1): 13:11:52 | 1 of 5 OK created view model lcj.stg_orders.......................... [OK in 1.05s]
+2022-04-13 05:11:52.949260 (Thread-1): Finished running node model.dbt_demo.stg_orders
+2022-04-13 05:11:52.951252 (Thread-3): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F234B73FD0>]}
+2022-04-13 05:11:52.951252 (Thread-3): 13:11:52 | 3 of 5 OK created view model lcj.stg_customers....................... [OK in 1.05s]
+2022-04-13 05:11:52.952246 (Thread-3): Finished running node model.dbt_demo.stg_customers
+2022-04-13 05:11:53.634741 (Thread-2): SQL status: OK in 0.94 seconds
+2022-04-13 05:11:53.636752 (Thread-2): finished collecting timing info
+2022-04-13 05:11:53.636752 (Thread-2): On model.dbt_demo.stg_payments: Close
+2022-04-13 05:11:53.645009 (Thread-2): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F234B647F0>]}
+2022-04-13 05:11:53.645009 (Thread-2): 13:11:53 | 2 of 5 OK created view model lcj.stg_payments........................ [OK in 1.75s]
+2022-04-13 05:11:53.646013 (Thread-2): Finished running node model.dbt_demo.stg_payments
+2022-04-13 05:11:53.647011 (Thread-4): Began running node model.dbt_demo.customers
+2022-04-13 05:11:53.648011 (Thread-1): Began running node model.dbt_demo.orders_test
+2022-04-13 05:11:53.648011 (Thread-4): 13:11:53 | 4 of 5 START table model lcj.customers............................... [RUN]
+2022-04-13 05:11:53.648011 (Thread-1): 13:11:53 | 5 of 5 START table model lcj.orders_test............................. [RUN]
+2022-04-13 05:11:53.649011 (Thread-4): Acquiring new oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:53.649011 (Thread-4): Compiling model.dbt_demo.customers
+2022-04-13 05:11:53.652013 (Thread-4): Writing injected SQL for node "model.dbt_demo.customers"
+2022-04-13 05:11:53.652013 (Thread-1): Acquiring new oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.653012 (Thread-1): Compiling model.dbt_demo.orders_test
+2022-04-13 05:11:53.657012 (Thread-1): Writing injected SQL for node "model.dbt_demo.orders_test"
+2022-04-13 05:11:53.658013 (Thread-4): finished collecting timing info
+2022-04-13 05:11:53.663013 (Thread-1): finished collecting timing info
+2022-04-13 05:11:53.676024 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:53.683021 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.683021 (Thread-4): On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.customers"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP table lcj.customers__dbt_tmp cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:53.683021 (Thread-1): On model.dbt_demo.orders_test: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.orders_test"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP table lcj.orders_test__dbt_tmp cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:53.684028 (Thread-4): Opening a new connection, currently in state init
+2022-04-13 05:11:53.684028 (Thread-1): Opening a new connection, currently in state closed
+2022-04-13 05:11:53.684028 (Thread-4): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:53.684028 (Thread-1): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:53.767341 (Thread-1): SQL status: OK in 0.08 seconds
+2022-04-13 05:11:53.770363 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.770363 (Thread-1): On model.dbt_demo.orders_test: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.orders_test"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP table lcj.orders_test__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:53.779376 (Thread-1): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:53.787378 (Thread-1): Writing runtime SQL for node "model.dbt_demo.orders_test"
+2022-04-13 05:11:53.788359 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.788359 (Thread-1): On model.dbt_demo.orders_test: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.orders_test"} */
+
+
+  create  table lcj.orders_test__dbt_tmp
+  
+  as
+    
+
+with orders as (
+
+    select * from lcj.stg_orders
+
+),
+
+payments as (
+
+    select * from lcj.stg_payments
+
+),
+
+order_payments as (
+
+    select
+        order_id,
+
+        sum(case when payment_method = 'credit_card' then amount else 0 end) as credit_card_amount,
+        sum(case when payment_method = 'coupon' then amount else 0 end) as coupon_amount,
+        sum(case when payment_method = 'bank_transfer' then amount else 0 end) as bank_transfer_amount,
+        sum(case when payment_method = 'gift_card' then amount else 0 end) as gift_card_amount,
+        sum(amount) as total_amount
+
+    from payments
+
+    group by order_id
+
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        orders.status,
+
+        order_payments.credit_card_amount,
+
+        order_payments.coupon_amount,
+
+        order_payments.bank_transfer_amount,
+
+        order_payments.gift_card_amount,
+
+        order_payments.total_amount as amount
+
+    from orders
+
+
+    left join order_payments
+        on orders.order_id = order_payments.order_id
+
+)
+
+select * from final
+2022-04-13 05:11:53.848804 (Thread-1): SQL status: OK in 0.06 seconds
+2022-04-13 05:11:53.851808 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.851808 (Thread-1): On model.dbt_demo.orders_test: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.orders_test"} */
+rename orders_test to orders_test__dbt_backup
+2022-04-13 05:11:53.899566 (Thread-1): SQL status: OK in 0.05 seconds
+2022-04-13 05:11:53.902729 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.902729 (Thread-1): On model.dbt_demo.orders_test: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.orders_test"} */
+rename orders_test__dbt_tmp to orders_test
+2022-04-13 05:11:53.917017 (Thread-1): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:53.918018 (Thread-1): On model.dbt_demo.orders_test: COMMIT
+2022-04-13 05:11:53.918018 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.919017 (Thread-1): On model.dbt_demo.orders_test: COMMIT
+2022-04-13 05:11:53.922018 (Thread-1): SQL status: OK in 0.00 seconds
+2022-04-13 05:11:53.925020 (Thread-1): Using oracle connection "model.dbt_demo.orders_test".
+2022-04-13 05:11:53.925020 (Thread-1): On model.dbt_demo.orders_test: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.orders_test"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP table lcj.orders_test__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:53.927711 (Thread-4): SQL status: OK in 0.24 seconds
+2022-04-13 05:11:53.929712 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:53.929712 (Thread-4): On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.customers"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP table lcj.customers__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:53.938271 (Thread-4): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:53.940265 (Thread-4): Writing runtime SQL for node "model.dbt_demo.customers"
+2022-04-13 05:11:53.940265 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:53.941253 (Thread-4): On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.customers"} */
+
+
+  create  table lcj.customers__dbt_tmp
+  
+  as
+    with customers as (
+
+    select * from lcj.stg_customers
+
+),
+
+orders as (
+
+    select * from lcj.stg_orders
+
+),
+
+payments as (
+
+    select * from lcj.stg_payments
+
+),
+
+customer_orders as (
+
+        select
+        customer_id,
+
+        min(order_date) as first_order,
+        max(order_date) as most_recent_order,
+        count(order_id) as number_of_orders
+    from orders
+
+    group by customer_id
+
+),
+
+customer_payments as (
+
+    select
+        orders.customer_id,
+        sum(amount) as total_amount
+
+    from payments
+
+    left join orders on
+         payments.order_id = orders.order_id
+
+    group by orders.customer_id
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order,
+        customer_orders.most_recent_order,
+        customer_orders.number_of_orders,
+        customer_payments.total_amount as customer_lifetime_value
+
+    from customers
+
+    left join customer_orders
+        on customers.customer_id = customer_orders.customer_id
+
+    left join customer_payments
+        on  customers.customer_id = customer_payments.customer_id
+
+)
+
+select * from final
+2022-04-13 05:11:54.070979 (Thread-1): SQL status: OK in 0.15 seconds
+2022-04-13 05:11:54.071995 (Thread-1): finished collecting timing info
+2022-04-13 05:11:54.071995 (Thread-1): On model.dbt_demo.orders_test: Close
+2022-04-13 05:11:54.081762 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F235EA5E20>]}
+2022-04-13 05:11:54.081762 (Thread-1): 13:11:54 | 5 of 5 OK created table model lcj.orders_test........................ [OK in 0.43s]
+2022-04-13 05:11:54.083344 (Thread-1): Finished running node model.dbt_demo.orders_test
+2022-04-13 05:11:54.175732 (Thread-4): SQL status: OK in 0.23 seconds
+2022-04-13 05:11:54.177741 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:54.177741 (Thread-4): On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.customers"} */
+rename customers to customers__dbt_backup
+2022-04-13 05:11:54.247616 (Thread-4): SQL status: OK in 0.07 seconds
+2022-04-13 05:11:54.250619 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:54.250619 (Thread-4): On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.customers"} */
+rename customers__dbt_tmp to customers
+2022-04-13 05:11:54.406106 (Thread-4): SQL status: OK in 0.16 seconds
+2022-04-13 05:11:54.408107 (Thread-4): On model.dbt_demo.customers: COMMIT
+2022-04-13 05:11:54.408107 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:54.408107 (Thread-4): On model.dbt_demo.customers: COMMIT
+2022-04-13 05:11:54.422112 (Thread-4): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:54.424125 (Thread-4): Using oracle connection "model.dbt_demo.customers".
+2022-04-13 05:11:54.424125 (Thread-4): On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "dbt_oracle", "target_name": "dev", "node_id": "model.dbt_demo.customers"} */
+DECLARE
+     dne_942    EXCEPTION;
+     PRAGMA EXCEPTION_INIT(dne_942, -942);
+     attempted_ddl_on_in_use_GTT EXCEPTION;
+     pragma EXCEPTION_INIT(attempted_ddl_on_in_use_GTT, -14452);
+  BEGIN
+     EXECUTE IMMEDIATE 'DROP table lcj.customers__dbt_backup cascade constraint';
+  EXCEPTION
+     WHEN attempted_ddl_on_in_use_GTT THEN
+        NULL; -- if it its a global temporary table, leave it alone.
+     WHEN dne_942 THEN
+        NULL; -- if it doesn't exist, do nothing .. no error, nothing .. ignore.
+  END;
+2022-04-13 05:11:54.450516 (Thread-4): SQL status: OK in 0.03 seconds
+2022-04-13 05:11:54.452522 (Thread-4): finished collecting timing info
+2022-04-13 05:11:54.452522 (Thread-4): On model.dbt_demo.customers: Close
+2022-04-13 05:11:54.461182 (Thread-4): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '00e37a9b-7fcd-4163-84ae-20166d1eaa26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F22EF18CD0>]}
+2022-04-13 05:11:54.462182 (Thread-4): 13:11:54 | 4 of 5 OK created table model lcj.customers.......................... [OK in 0.81s]
+2022-04-13 05:11:54.463183 (Thread-4): Finished running node model.dbt_demo.customers
+2022-04-13 05:11:54.464183 (MainThread): Acquiring new oracle connection "master".
+2022-04-13 05:11:54.465183 (MainThread): Opening a new connection, currently in state closed
+2022-04-13 05:11:54.465183 (MainThread): Attempting to connect using Oracle method: 'OracleConnectionMethod.HOST' and dsn: '10.10.241.60:1521/limsbi'
+2022-04-13 05:11:54.546216 (MainThread): On master: COMMIT
+2022-04-13 05:11:54.546216 (MainThread): Using oracle connection "master".
+2022-04-13 05:11:54.546216 (MainThread): On master: COMMIT
+2022-04-13 05:11:54.553212 (MainThread): SQL status: OK in 0.01 seconds
+2022-04-13 05:11:54.553212 (MainThread): On master: Close
+2022-04-13 05:11:54.559212 (MainThread): 13:11:54 | 
+2022-04-13 05:11:54.560214 (MainThread): 13:11:54 | Finished running 3 view models, 2 table models in 3.61s.
+2022-04-13 05:11:54.560214 (MainThread): Connection 'master' was properly closed.
+2022-04-13 05:11:54.561214 (MainThread): Connection 'list_limsbi' was properly closed.
+2022-04-13 05:11:54.561214 (MainThread): Connection 'list_limsbi_lcj' was properly closed.
+2022-04-13 05:11:54.561214 (MainThread): Connection 'model.dbt_demo.orders_test' was properly closed.
+2022-04-13 05:11:54.561214 (MainThread): Connection 'model.dbt_demo.stg_payments' was properly closed.
+2022-04-13 05:11:54.561214 (MainThread): Connection 'model.dbt_demo.stg_customers' was properly closed.
+2022-04-13 05:11:54.561214 (MainThread): Connection 'model.dbt_demo.customers' was properly closed.
+2022-04-13 05:11:54.568223 (MainThread): 
+2022-04-13 05:11:54.568223 (MainThread): Completed successfully
+2022-04-13 05:11:54.569224 (MainThread): 
+Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+2022-04-13 05:11:54.570223 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F235EAAD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F235EC1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F235EC9C10>]}
+2022-04-13 05:11:54.570223 (MainThread): Flushing usage events
