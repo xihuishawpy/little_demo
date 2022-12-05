@@ -1,0 +1,5 @@
+*.gz
+*.pdopt
+*.pdparams
+log/
+checkpoint/
