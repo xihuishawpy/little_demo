@@ -1,3 +1,11 @@
+'''
+Description: 
+Version: 1.0
+Autor: xihuishaw
+Date: 2023-01-12 17:40:56
+LastEditors: xihuishaw
+LastEditTime: 2023-01-12 18:08:54
+'''
 
 #!/usr/bin/python
 # coding=utf-8
@@ -20,10 +28,8 @@ def getKeywords_textrank(data,topK):
         '产品线'].reset_index().drop(['index'], axis=1).values, data['咨询内容'].reset_index().drop(['index'], axis=1).values
     ids, titles, keys = [], [], []
     for index in range(len(idList)):
-        # text = '%s。%s' % (titleList[index], abstractList[index]) # 拼接标题和摘要
         text = abstractList[index]
         jieba.analyse.set_stop_words("data/stopWord.txt") # 加载自停词
-        # print "\"",titleList[index],"\"" , " 10 Keywords - TextRank :"
         keywords = jieba.analyse.textrank(text[0], topK=topK, allowPOS=('n','nz','v','vd','vn','l','a','d'))  # TextRank关键词提取，词性筛选
         word_split = " ".join(keywords)
         keys.append(word_split)

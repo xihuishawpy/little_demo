@@ -33,7 +33,6 @@ def getKeywords_tfidf(data,stopkey,topK):
     idList, titleList, abstractList = data['资源编码'].reset_index().drop(['index'],axis=1).values, data['产品线'].reset_index().drop(['index'],axis=1).values, data['咨询内容'].reset_index().drop(['index'],axis=1).values
     corpus = [] # 将所有文档输出到一个list中，一行就是一个文档
     for index in range(len(abstractList)):
-        # text = '%s。%s' % (titleList[index], abstractList[index]) # 拼接标题和摘要
         text = abstractList[index]
         text = dataPrepos(text[0],stopkey) # 文本预处理
         text = " ".join(text) # 连接成字符串，空格分隔
@@ -84,7 +83,6 @@ def to_result(cpx,data,stopkey):
     return result
 
 def main():
-    # dataFile = 'data/sample_data.csv'
     dataFile = 'data/contents.xlsx'
     data = pd.read_excel(dataFile)
     # 停用词表
