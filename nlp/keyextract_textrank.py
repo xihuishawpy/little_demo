@@ -1,11 +1,4 @@
-'''
-Description: 
-Version: 1.0
-Autor: xihuishaw
-Date: 2023-01-12 17:40:56
-LastEditors: xihuishaw
-LastEditTime: 2023-01-12 17:41:21
-'''
+
 #!/usr/bin/python
 # coding=utf-8
 # 采用TextRank方法提取文本关键词
