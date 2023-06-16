@@ -4,8 +4,10 @@
 4. test.py解析逻辑，主要是初始化类，需要爬取的start_urls，通过parse函数解析网页并返回item
 
 在写parse逻辑的时候，可以在项目根目录下，通过 `scrapy shell "url"`的方式调试。
+
 或者，在根目录下，cmd运行 `scrapy crawl A` (这里的A是定义的spider类的name值) 
 
-[scrapy中文文档](https://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html)
+- [scrapy中文文档](https://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html)
+- [文章demo](https://mp.weixin.qq.com/s/THhW0RMcfg0xdlr3xFpoFA)
 
    
