@@ -1,0 +1,3 @@
+*.csv
+.idea/
+scrapy_demo/.ipynb_checkpoints/
