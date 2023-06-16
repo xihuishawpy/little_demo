@@ -6,4 +6,6 @@
 在写parse逻辑的时候，可以在项目根目录下，通过 `scrapy shell "url"`的方式调试。
 或者，在根目录下，cmd运行 `scrapy crawl A` (这里的A是定义的spider类的name值) 
 
+https://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html
+
    
